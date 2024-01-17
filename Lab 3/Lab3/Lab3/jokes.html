@@ -1,0 +1,38 @@
+
+<!--
+    Full Name: Hong Phong Nguyen
+    File Name: jokes.html
+	Professor: Alemeseged Legesse
+    Description: This is jokes.html to get information from user and got applied style.css
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Hong Phong Nguyen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jokes</title>
+    <link rel="stylesheet" href="jokes.css">
+    <script src="Jokes.js" defer>
+    </script>
+</head>
+<body>
+    <div id="container">
+    <header>
+        <h1>Jokes to Make You Laugh</h1>
+    </header>
+    <div id="jokes">
+        <div id="jokestext"></div>
+        <div id="author"></div>
+    </div>
+    <div id="button">
+        <button type="button">Get a Joke</button>
+    </div>
+</div>
+    <script>
+        window.onload = function() {
+            playJokes();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/*
+    Full Name: Hong Phong Nguyen
+    File Name: style.css
+	Professor: Alemeseged Legesse
+*/
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url('Mypic/Resume.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    font-family: Arial, sans-serif;
+    text-align: left; 
+    color: #8B4513; 
+}
+
+
+header {
+    background-image: url('Mypic/Header.jpg');
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    font-family: Arial, sans-serif;
+    color: black;
+}
+ul{
+    padding-left: 20px;
+}
+h1 {
+    font-size: 35px;
+}
+
+
+nav {
+    background-color: #3498db;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+.container-p1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 25px;
+}
+
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+
+section {
+    background-color: rgba(255, 255, 255, 0.345); 
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #8B4513;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+#project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.each-project img {
+    width: 80%; 
+    max-height: 80%; 
+}
+.each-project {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 25px;
+}
+#button{
+    text-align: center;
+}
+button {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: wheat;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+a{
+    color:#3498db;
+}
+#contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 5px;
+}

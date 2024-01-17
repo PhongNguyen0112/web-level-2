@@ -1,0 +1,178 @@
+<!--
+    Full Name: Hong Phong Nguyen
+    File Name: Lab2.html
+    Date: 10/03/2023
+	Due: 10/08/2023
+	Professor: Alemeseged Legesse
+    Description: This is Lab2.html to get information from user and got applied style.css
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Lab 4 by Hong Phong Nguyen</title>
+		<meta charset="utf-8">
+	
+	<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<header class="center">
+				<h1>Registration</h1>
+				<p>Please enter the following information. Fields marked with an asterisk (<span class="required">*</span>) are required.</p>
+			</header>
+			<div id="content">
+		<form action="javascript:void(0)" method="post" enctype="text/plain"> 
+			<fieldset>
+				<legend>Personal Information</legend>
+				<table>
+				<tr>
+					<td><label for="firstName"> <span class="required">* </span> First Name:</label></td>
+					<td><input type="text" name="firstName" id="firstName" required></td>
+				</tr>
+				<tr>
+					<td> <label for="lastName"> <span class="required">* </span> Last Name:</label> </td>
+					<td> <input type="text" name="lastName" id="lastName" required></td>
+				</tr>
+				<tr>
+					<td> <label for="address"> <span class="required">* </span> Address: </label> </td>
+					<td> <input type="text" name="address" id="address" size=40 required></td>
+				</tr>
+				<tr>
+					<td> <label for="city"> <span class="required">* </span> City:</label></td>
+					<td> <input type="text" name="City" id="city" required></td>
+				</tr>
+				<tr>
+					<td> <label for="province"> <span class="required">* </span> Province: </label> </td>
+					<td>
+						<select name="province" id="province" required>
+							<option value="" disabled selected hidden >Select a province</option>
+                            <option value="BC">BC</option>
+                            <option value="AB">AB</option>
+                            <option value="SK">SK</option>
+                            <option value="MB">MB</option>
+                            <option value="ON">ON</option>
+							<option value="QC">QC</option>
+                            <option value="NB">NB</option>
+                            <option value="NS">NS</option>
+                            <option value="PE">PE</option>
+                            <option value="NF">NF</option>
+							<option value="YK">YK</option>
+                            <option value="NWT">NWT</option>
+                            <option value="NU">NU</option>
+                        </select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="postal-code"><span class="required">* </span>Postal Code: </label></td>
+					<td><input type="text" name="postal-code" id="postal-code" maxlength="6" required ></td>
+				</tr>
+				<tr>
+					<td><label for="email"><span class="required">* </span>Email address: </label></td>
+					<td><input type="text" name="email" id="email" required></td>
+				</tr>
+				<tr>
+					<td><label for="home-phone"><span class="required">* </span>Home Phone: </label></td>
+					<td><input type="tel" name="home-phone" id="home-phone" required></td>
+				</tr>
+				<tr>
+					<td><label for="work-phone">Work Phone: </label></td>
+					<td><input type="tel" name="work-phone" id="work-phone"></td>
+				</tr>
+			</table>
+				
+				<!-- * First Name | textbox -->
+				<!-- * Last Name | textbox -->
+				<!-- * Address | textbox, with a size of 40 characters -->
+				<!-- * City | textbox -->
+				<!-- * Province | dropdown box, has options for all provinces and territories. 
+					Option values should be the short code for the province. A list is provided below. 
+					
+					BC - British Columbia
+					AB - Alberta
+					SK - Saskatchewan
+					MB - Manitoba
+					ON - Ontario
+					QC - Quebec
+					NB - New Brunswick
+					NS - Nova Scotia
+					PE - Prince Edward Island
+					NF - Newfoundland
+					YK - Yukon
+					NWT- Northwest Territories
+					NU - Nunavut
+					
+				-->
+				<!-- * Postal Code | textbox, maximum length of 6 characters -->
+				<!-- * Email address | textbox -->
+				<!-- * Home phone | textbox -->
+				<!-- Work phone | textbox -->
+					
+			</fieldset>
+			<fieldset>
+				<legend>Payment Information</legend>
+				<table>
+					<tr>
+						<td>Credit Card Type:</td>
+						<td>
+							<label for="visa"><img src="images/visa.png" alt="creditCardVisa-image"></label>
+							<input type="radio" id="visa" name="card" value="creditCardVisa" >
+							<label for="mastercard"><img src="images/mastercard.png" alt="creditCardMasterCard-image"></label>
+							<input type="radio" id="mastercard" name="card" value="creditCardMasterCard" >
+							<label for="amex"><img src="images/amex.png" alt="creditCardAmex-image"></label>
+							<input type="radio" id="amex" name="card" value="creditCardAmex">
+						</td>
+					</tr>
+					<tr>
+						<td><label for="credit">Credit Card Number </label></td>
+						<td><input type="number" name="credit" id="credit"></td>
+					</tr>
+					<tr>
+						<td><label for="expiry-month">Expiry(MM/YY)</label>
+						<label for="expiry-year"></label></td>
+						<td>
+							<input type="text" name="date" id="expiry-month" maxlength="2" size="2"> <span>/</span> 
+							<input type="text" name="date" id="expiry-year" maxlength="2" size="2">
+						</td>
+					</tr>
+				</table>
+				<!-- Credit Card Type | radio buttons
+					 
+					 There should be three buttons: one for VISA, one for MasterCard, and one for American Express.
+					 All three buttons can go in one <td> element.
+					 
+					 NOTE: each radio button should have the same name, but a different id. For example, you might use
+					 the name "creditCard" for each, but "creditCardVisa", "creditCardAmex" and "creditCardMasterCard"
+					 as the id's. 
+					 
+					 Also, please review the lab instructions regarding the placement of credit card icon images beside
+					 each radio button. 
+				-->
+				<!-- Credit Card Number | textbox -->
+				<!-- Expiry Date | textbox, maximum 5 characters (MM/YY) -->
+			</fieldset>
+			<fieldset>
+				<legend>Agree and Submit</legend>
+				<table>
+					<tr>
+						<td><label for="check"> Check if you agree with out <a href="rules.html"> Terms and Conditions</a> </label>
+						<input type="checkbox" id="check" name="check" value="yes" ></td>
+					</tr>
+					<tr>
+						<td> <button type="button">Submit Registration </button>
+						<button type="button">Reset Form </button> </td>
+					</tr>
+				</table>
+					
+					<!-- * Agree to Terms and Conditions? | checkbox, value of 'yes' -->
+					<!-- No field name. Place a submit button in one column, and reset button in the other. -->
+			</fieldset>
+		</form>
+		</div>
+				<!-- End Content -->
+				<footer>	
+					<p>&copy;2013 CST8285. All rights reserved.</p>
+				</footer>
+		</div>
+			<!-- End Wrapper -->
+	</body>
+</html>

@@ -1,0 +1,65 @@
+/* CSS Document */
+/*
+    Full Name: Hong Phong Nguyen
+    File Name: style.css
+    Date: 10/03/2023
+	Due: 10/08/2023
+	Professor: Alemeseged Legesse
+    Description: This is style.css to apply on Lab2.html
+*/
+body {
+margin: 0px;
+padding: 0px;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header{
+    background-color: #333;
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 800px;
+    align-content: center;
+    margin: 40px auto;
+}
+.box{
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    flex:1;
+    min-width: 200px;
+}
+.red{
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.green {
+    background-color: green;
+}
+.orange {
+    background-color: orange;
+}
+.yellow{
+    background-color: yellow;
+}
+footer p{
+margin: 20px;
+}
+@media (max-width:600px) {
+.container{
+    flex-direction: column;
+}
+.box{
+    margin: 5px;
+    width: fit-content;
+}
+}

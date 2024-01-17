@@ -1,0 +1,99 @@
+<?php
+session_start();
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "blog_program";
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $author = $_SESSION['username']; 
+    $content = $_POST['blogContent'];
+    $keyword = $_POST['keyword'];
+    $time = date('Y-m-d H:i:s'); 
+
+
+    $sql = "INSERT INTO blog_content (author, content, keyword, time) VALUES (?, ?, ?, ?)";
+
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("ssss", $author, $content, $keyword, $time);
+        
+        if ($stmt->execute()) {
+            echo "Blog posted successfully!";
+        } else {
+            echo "Error: " . $stmt->error;
+        }
+        $stmt->close();
+    }
+    $mysqli->close();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Publish Blog</title>
+    <script src="post.js" defer></script>
+    <style>
+        .warning {
+            color: red;
+            padding: 5px;
+            font-size: 14px;
+        }
+        
+        .error-border {
+            border: 2px solid red !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./discovery.php">Discover</a></li>
+            <li><a href="./profile.php">MyProfile</a></li>
+            <li><a class="active">Publish Blog</a></li>
+        </ul>
+    </div>    
+    <div class="toppicture">
+        <p>JavaScript Community</p>
+    </div>
+    <header>
+        <h1>Publish Blog</h1>
+    </header>
+
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="myForm" name="myForm" onsubmit="return validate();">
+    <div class="textfield">
+        <label for="blogContent">Blog Content:</label>
+        <textarea id="blogContent" name="blogContent"></textarea>
+    </div>
+
+    <label for="keyword">Keyword:</label>
+    <select id="keyword" name="keyword">
+        <option value="technology">Technology</option>
+        <option value="lifestyle">Lifestyle</option>
+        <option value="travel">Travel</option>
+       
+    </select>
+
+    <button type="submit">Submit</button>
+</form>
+
+    <footer>
+        <p>&copy; 2023 Blog Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

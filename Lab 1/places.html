@@ -1,0 +1,122 @@
+<!--
+    Full Name: Hong Phong Nguyen
+    File Name: places.html
+    Date: 09/14/2023
+    Description: This is page 2 to let users sharing information about my hometown-VietNam
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page 2 to get information</title>
+    <meta charset="UTF-8">
+        <meta name="description" content="Hometown-Page 1">
+        <meta name="keywords" content="CST8285 Viet Nam">
+        <meta name="author" content="Hong Phong Nguyen">
+</head>
+<body>
+    This is page 2. Click <a href="hometown.html">here</a> to go to Page 1
+    <h1>Share your information about my home town</h1>
+    <form action="Lab1Form.php" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>1: User Info</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="first-name">First Name</label> 
+                       
+                    </td>
+                    <td>
+                        <label for="last-name">Last Name</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="first-name" name="first-name" readonly required >
+                        &emsp;&emsp;
+                    </td>
+                    <td>
+                        <input type="text" id="last-name" name="last-name" maxlength="10" required >
+                    </td>
+                </tr>
+            </table>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" size="50" placeholder="format for email is xxx@yyy.zzz"><br>
+        </fieldset>
+        <fieldset>
+            <legend>2: Location</legend>
+            <label for="address">Address</label><br>
+            <input type="text" name="address" id="address" size="50" ><br>
+            <table>
+                <tr>
+                    <td>
+                        <label for="city">City</label>
+                    </td>
+                    <td>
+                        <label for="state">State</label>
+                    </td>
+                    <td>
+                        <label for="zip">Zip</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="City" id="city" size="20">
+                        &emsp;
+                    </td>
+                    <td>
+                        <input type="text" name="State" id="state" size="5">
+                        &emsp;
+                    </td>
+                    <td>
+                        <input type="number" name="Zip" id="zip" >
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <label for="Phone">Phone</label>   
+                    </td>
+                    <td>
+                        <label for="Country">Country</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="tel" name="Phone" id="Phone" size="20" placeholder="NNN-NNN-NNNN">
+                        &emsp; 
+                    </td>
+                    <td>
+                        <select name="Country" id="Country">
+                            <option value="Canada" selected>Canada </option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="USA">USA</option>
+                            <option value="Taiwan">Taiwan</option>
+                            <option value="Korea">Korea</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+                <p>Continent</p>
+                <input type="radio" id="NA" name="continent" value="North America" >
+                <label for="NA">North America</label><br>
+                <input type="radio" id="Europe" name="Europe" value="Europe" >
+                <label for="Europe">Europe</label><br>
+                <input type="radio" id="SA" name="South America" value="South America">
+                <label for="SA">South America</label><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>3.Favorite Place</legend>
+            <label for="FP">Favorite Place:</label>
+            <input type="text" name="Place" id="FP"><br>
+            <label for="Place">Why do you love this place?</label><br>
+            <textarea name="area" id="Place" rows="5" cols="50"></textarea>
+        </fieldset>
+        <button type="button">Send </button>
+        <button type="button">Clear Information</button><br><br>
+    </form>
+    <footer>
+        <p>Hong Phong Nguyen | Date: September 20, 2023 | 2023 Copyright</p>
+    </footer>    
+</body>
+</html>

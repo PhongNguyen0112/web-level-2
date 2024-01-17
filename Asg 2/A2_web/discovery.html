@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="script.js"></script>
+    <title>Blog Website</title>
+</head>
+<body>
+    <div class="topnav">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a class="active">Discover</a></li>
+            <li><a href="./profile.php">MyProfile</a></li>
+            <li><a href="./post.html">Publish Blog</a></li>
+        </ul>
+    </div>    
+    <div class="toppicture">
+        <p>JavaScript Community</p>
+    </div>
+    <header>
+        <h1>Blog Website</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchBlogs()">Search</button>
+        </div>
+    </header>
+
+    <section class="blog-list">
+        <div class="container">
+            <div class="search-left">
+                <div class="card">
+                    <h3>Category</h3>
+                    <p class="small-italic">clike and jump to Category</p>  
+                    <ul>
+                        <li><a href="Projects.html">Data Types and Variables</a></li>
+                        <li><a href="Projects.html">Control Structures</a></li>
+                        <li><a href="Projects.html">Functions and Scope</a></li>
+                        <li><a href="Projects.html">Arrays and Objects</a></li>
+                        <li><a href="Projects.html">ES6+ Features</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="search-right">
+                <!-- JavaScript load -->
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Blog Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: beige;
+    text-align: center;
+    ;
+}
+#container{
+    width: 800px;
+    padding: 50px;
+    margin: 10px auto;
+    background-color: wheat;
+}
+h1 {
+    font-family: "Georgia", "Times New Roman", Times, serif;
+}
+
+#jokestext, #author {
+    font-family: "Georgia", "Times New Roman", Times, serif;
+}
+
+#button {
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+#jokes {
+    border: 15px solid brown;
+    border-radius: 15px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+#jokestext {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+#author {
+    font-style: italic;
+    text-align: right; 
+}

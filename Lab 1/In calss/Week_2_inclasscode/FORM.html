@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name=" author " content=" Hala Own " />
+    <meta name=" description " content=" Demo for lecture 3 " />
+    <meta name=" keywords " content=" form,get,post" />
+
+    <title>Regstration Form</title>
+  </head>
+  <body>
+    <h1 >Regstration Form</h1>
+
+    <form action="process.php" method="get" enctype="text/plain">
+      <fieldset>
+        <legend>Basic input Types</legend>
+
+        <label for="ema">Enter your email:</label>
+        <input type="email" id="ema" name="email" required /> <br /><br />
+
+        <label for="cc2">Phone</label>
+        <input type="text" id="cc2" name="contact2" /><br /><br />
+
+        <label for="cc3">MEMO </label>
+        <textarea name="test1" id="cc3" rows="14" cols="18"></textarea
+        ><br /><br />
+
+        <label for="cc4">Passward </label>
+        <input
+          type="password"
+          name="secret"
+          id="cc4"
+          size="10"
+          maxlength="10"
+          placeholder="min 6 characters"
+        /><br /><br />
+
+        <label for="cc5">Age </label>
+        <input type="range" id="cc5" name="age" /><br />
+
+        <label for="cc6">Salary </label>
+        <input
+          type="number"
+          id="cc6"
+          name="salary"
+          min="400"
+          max="2000"
+          step="100"
+        /><br /><br />
+
+        <label for="cc7">color </label>
+        <input
+          type="color"
+          name="bg-color"
+          id="cc7"
+          value="#ff6347"
+        /><br /><br />
+
+        <label for="cc8"> Date </label>
+        <input type="date" id="cc8" name="appt-date" /><br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Radio Buttons</legend>
+
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label><br />
+
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label><br />
+
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other">Other</label><br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Checkbox</legend>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+        <label for="vehicle1"> I have a bike</label><br />
+
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+        <label for="vehicle2"> I have a car</label><br />
+
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+        <label for="vehicle3"> I have a boat</label>
+      </fieldset>
+      <label for="myBrowser">Choose a browser from this list:</label>
+
+      <select name="browserName" id="myBrowser" multiple size="2">
+        <option value="Chrome" selected>Chrome </option>
+        <option value="Firefox">FIREFOX</option>
+        <option value="Internet Explorer">Internet Explorer</option>
+        <option value="Opera">Opera</option>
+        <option value="Safari">Safari</option>
+        <option value="Microsoft Edge">Microsoft Edge</option></select
+      ><br /><br />
+
+      <label>Your Country Name: </label>
+      <input list="count" name="whatcountry" />
+
+      <!-- datalist Tag starts here -->
+      <datalist id="count">
+        <option value="Canada"></option>
+        <option value="USA"></option>
+        <option value="Cameron"></option>
+        <option value="England"></option>
+        <option value="Germany"></option>
+        <option value="AUE"></option>
+        <option value="China"></option>
+        <option value="Egypt"></option>
+        <option value="Indea"></option>
+        <option value="Italy"></option>
+        <option value="Russia"></option>
+      </datalist>
+
+      <br />
+      <br />
+      <!-- datalist Tag ends here -->
+      <div>
+        <label for="file">File</label>
+        <input id="file" type="file" name="file" />
+      </div>
+      <br />
+
+      <input type="submit" </input>
+      <input type="reset"></input>
+    </form>
+  </body>
+</html>
